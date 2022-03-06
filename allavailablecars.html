@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>all-available-cars</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href= "availablecars1.css">
+</head>
+  
+
+<body>
+    <div id="navbar"></div>
+<!--navbar start-->
+<div id ="body1">
+    <div id ="sidebox">
+        <div class ="filter_kms">
+            <p>Free kms</p>
+            <div class="filter_items">
+                <button onclick ="ninty()" class="filter_list">90</button>
+                <button onclick="onetwenty()" class="filter_list">120</button>
+                </div>
+        </div>
+        <div class ="filter_fuel">
+            <p>Fuel type</p>
+            <div class ="filter_items">
+                <button onclick="deiselcar()" id ="filter5">Deisel</button>
+                <button onclick="petrolcar()" id ="filter6">Petrol</button>
+            </div>
+        </div>
+        <div class ="filter_seats">
+            <p>Seats</p>
+            <div class ="filter_items">
+                <button onclick="five()" id ="filter5">5</button>
+                <button onclick="six()" id ="filter6">6</button>
+                <button onclick="seven()" id ="filter7">7</button>
+            </div>
+        </div>
+        <div class ="filter_cartype">
+            <p>Car Types</p>
+            <div class ="filter_items">
+                <button onclick="hatchbackcar()" id ="hatch">Hatchback</button>
+                <button onclick="sedancar()" id ="sedan">Sedan</button>
+            </div>
+        </div>
+        <div class ="filter_delivery">
+            <p>Delivery Type</p>
+            <div class ="filter_items">
+                <button onclick="Homecar()" class ="homedel">Home Delivery</button>
+                <button onclick="Airportcar()" class ="airportdel">Airport Delivery</button>
+            </div>
+        </div>
+    </div>
+    <div id="maincont">
+        <div id ="addressbox">
+            <h1></h1>
+        </div>
+        <div id ="datebox">
+            <span class="date1"></span>
+            <span class="date2">→</span>
+            <span class="date3"></span>
+        </div>
+        <div id ="delivery">
+            <div class="icon1">
+                <img src ="https://s3-ap-southeast-1.amazonaws.com/zoomcar/images/original/976c02875a91f8e252ab53c09f8f30b22ae0e905.png?1595735439">
+            </div>
+            <div>
+                <div class="card_heading">
+                    Get Home Delivery starting at just  ₹ 49
+                </div>
+                <div class ="card_heading1">
+                    Dont want to go for pick-up? Select Home Delivery on the next step
+                </div>
+            </div>   
+            
+</div>
+<!--main cars cont-->
+<div id ="cont"></div>
+</body>
+</html>
+
+<script src ="all-available-cars.js"></script>
+<script type="module" src="main.js"></script>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/65d9e63589.js" crossorigin="anonymous"></script>
+    <style>
+        /* #currDate{
+            /* margin-top: 20%; */
+        /* } */
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="main">
+        <div id="left">
+
+        </div>
+        <div id="right">
+            <div id="address"></div>
+            <div id="currDate"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="module" src="main.js"></script>
+<script>
+    var carData = JSON.parse(localStorage.getItem("cars"));
+    function findCarData(){
+    var ip = ''; // Current IP
+    var XMLHttp = new XMLHttpRequest();
+
+XMLHttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var json = JSON.parse(this.responseText);
+        let x = json.city;
+		
+        console.log(json.city+json.country);
+        carData.forEach(element => {
+            let rightdiv = document.getElementById("right");
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = element.img;
+            let name= document.createElement("h3")
+            name.innerText = element.name;
+            let city = element.City;
+            let location = element.location;
+            let price = element.price;
+            let fuel = element.fuel;
+            let seater = element.seater;
+            let rating = element.Rating;
+            let type = element.type;
+            let address = document.getElementById("address");
+            address.innerText = element.City;            
+            address.innerText = element.City;
+            let button = document.createElement("button");
+            button.innerText = "Click"
+            button.onclick= function(){
+                localStorage.setItem("carsDetails",JSON.stringify(element));
+            }
+          
+            if(x===element.City){
+                div.append(img,name,location,city,rating,button);
+                console.log(name);
+            }
+            rightdiv.append(div);
+            
+            
+            
+        });
+        
+       	}
+    
+};
+XMLHttp.open("GET", "http://ipwhois.app/json/" + ip, true);
+XMLHttp.send();
+
+
+}
+findCarData()
+let currDate = document.getElementById("currDate");
+            
+            function displayTime(){
+                let curr = new Date();
+
+                // let currDate = document.createElement("h2");
+                currDate.innerText=  curr.toDateString();
+                console.log(curr.toDateString());
+            // let time = document.createElement("h2");
+            // time.innerHTML = curr.toLocaleTimeString();
+        
+        //    currDate(date);
+        }
+        displayTime()
+        
+</script>

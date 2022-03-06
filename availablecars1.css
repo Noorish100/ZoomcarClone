@@ -1,0 +1,254 @@
+
+/* city-selection-start
+a{
+    text-decoration: none;
+    color: white;
+}
+.city-box{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    transition: all .2s;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.87);
+    z-index: 999;
+    display: none;
+}
+
+
+
+@media screen and (min-width:1140px) {
+    .city-box .drapdownbox{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.city-box .drapdownbox>div{
+    max-width: 328px;
+    width: 100%;
+    margin: 0 30px;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 5px;
+
+}
+
+.city-box .drapdownbox>div select{
+    float: right;
+    width: 100%;
+    padding: 15px;
+    color: #35495e;
+    border: none;
+    outline: none;
+    
+}
+
+option{
+    width: 100%;
+    padding: 25px;
+}
+
+
+.city-box-btn{
+    max-width: 328px;
+    width: 100%;
+    margin: auto;
+    margin-top: 83px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0.8px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background-color: #10a310;
+    display: block;
+    border: none;
+}
+
+.city-box-btn[disabled]{
+    background-color: #e0e0e0;
+    color: #a8a8a8;
+    border-color: #e0e0e0;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+} */
+
+/* nav bar start */
+#body1{
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+#sidebox{
+    height: 550px;
+    width: 25%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border: 1px solid green;
+    background-color:lavender;  
+}
+
+#sidebox p{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#maincont{
+    margin: auto;
+    width: 65%;
+    margin-top: 1%;
+    margin-left: 4%;
+    /* border:  2px solid black; */
+}
+/* address box */
+#addressbox{
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 254, 254);
+    border: 1px solid rgb(19, 228, 12);
+}
+#datebox{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(19, 228, 12);
+    margin-top: 2%;
+    font-size: 18px;
+}
+#delivery{
+    height: 60px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    margin-top: 2%;
+    border: 1px solid rgb(190, 189, 189);
+    border-radius: 4px;
+}
+
+
+.icon1>img{
+    width: 50px;
+    height: 50px;
+    margin-right: 2%;
+}
+.card_heading{
+    font: size 14px;
+    color:1f1f1f;
+    margin-bottom: 4px;
+}
+.card_heading1{
+    font-size: 11px;
+    padding-top: 4px;
+    color:#a8a8a8;
+    letter-spacing: 0.4px;
+} */
+/* filtering boxe*/
+
+.filter_kms{
+   height: 100px;
+  
+  
+}
+/*filterin items box*/
+
+.filter_items{
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+   background-color: gray;
+    display: flex;
+}
+.filter_list{
+    margin: 10px 10px;
+    height: 30px;
+    width: 80px;
+}
+/*filter by furl*/
+.filter_items_fuel{
+    width: 80px;
+    height: 30px;
+    margin: 10px 10px;
+}
+/* filtering by seats */
+
+#filter5,#filter6,#filter7{
+    margin-top:10px;
+    height: 30px;
+    width: 80px;
+    margin: 10px 10px;
+}
+button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+#hatch,#sedan{
+    height: 30px;
+width:100px;
+margin: 10px 10px;
+}
+
+.homedel,.airportdel{
+    height: 30px;
+    width:100px;
+    margin: 10px 10px;
+}
+
+/* cars container*/
+#cont{
+    height: auto;
+   
+}
+#cont>div{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 4px;
+}
+#cont>div>div>p>span{
+    color: green;
+    font-size: 18px;
+    font-family: bolder;
+}
+#cont>div>div>h5>img{
+    height: 20px;
+}
+#cont>div>div{
+    width: 50%;
+}
+#cont>div>div>h3{
+    font-size: 20px;
+}
+#cont>div>div>p{
+    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#cont>div>div>h5{
+    font-size: 18px;
+    color: green;
+    display: flex;
+    align-items: center;
+}
+#cont>div>button{
+    height: 40px;
+    font-weight: bolder;
+    width: 18%;
+    background-color: rgb(58, 57, 57);
+    color:whitesmoke;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#cont>div>button:hover{
+    background-color: green;
+    /* color: black; */
+}
+#cont>div>img{
+    height: 160px;
+}

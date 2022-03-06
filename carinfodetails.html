@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #car>div>div>p>Span{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="car">
+
+    </div>
+</body>
+</html>
+<script type="module" src="main.js"></script>
+<script>
+    let carData = JSON.parse(localStorage.getItem("carsDetails"));
+            let rightdiv = document.getElementById("car");
+            let div = document.createElement("div");
+            let details = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = carData.img;
+            let name= document.createElement("h1")
+            name.innerText = carData.name;
+            let city = document.createElement("p");
+            city.innerText = carData.City;
+            let location_city = document.createElement("p");
+            location_city.innerText = carData.location;
+
+            let price = document.createElement("p");
+            price.innerHTML= `<span>Speacial Price </span>`+ carData.price;
+            let description = document.createElement("h3");
+            description.innerText = "Description";
+
+            let fuel = document.createElement("p")
+            fuel.innerText = carData.fuel;
+            let seater = document.createElement("p")
+            seater.innerText= carData.Seater;
+
+            let rating = document.createElement("p");
+            rating.innerText = carData.Rating;
+
+            let type = document.createElement("p").innerText = carData.type;
+
+            let button_div = document.createElement("div");
+            let booking = document.createElement("button");
+            booking.innerText = "Confirm Booking"
+            let back_btn = document.createElement("button");
+            back_btn.innerText = "Go Back"
+            booking.onclick= function(){
+                window.location.href = "booking.html";
+            }
+            back_btn.onclick= function(){
+                window.location.href = "carDetails.html";
+            }
+            button_div.append(booking,back_btn)
+            details.append(name,city, location_city,price,rating,description,fuel,seater,type,button_div)
+            div.append(img,details)
+            rightdiv.append(div);
+            console.log(seater);
+</script>
